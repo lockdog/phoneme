@@ -1,7 +1,12 @@
 <div class="jumbotron center">
 <h1>phoneme</h1>
+ <% if user_signed_in? %>
+          # participant - scan QR code to join conference
+     <% else %>
+
 <p>opportunity knocks in many languages, are you ready?</p>
-<p>human based language interpreting, for each user's phone</P>
-<p>interpreters click here to <%= link_to "Sign Up", "#", class: "btn btn-primary btn-lg" %></p>
-<p>users click here to <%= link_to "Sign Up", "#", class: "btn btn-primary btn-lg" %></p>
+<p>human based language interpreting, using each user's phone</P>
+<p>click here to <%= link_to "log in", new_user_session_path, class: "btn btn-primary btn-lg" %></p>
+<p>click here to <%= link_to "sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+ <% end %>
 </div>
